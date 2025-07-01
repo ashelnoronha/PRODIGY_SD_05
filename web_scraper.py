@@ -22,7 +22,7 @@ if response.status_code == 200:
         data.append([text, author, tags])
 
     df = pd.DataFrame(data, columns=['Quote', 'Author', 'Tags'])
-    df = df.drop_duplicates()  # Assign back or use inplace=True
+    df = df.drop_duplicates() 
     df.to_csv('quotes.csv', index=False)
     print(f'Successfully saved {len(df)} quotes to quotes.csv')
 else:
